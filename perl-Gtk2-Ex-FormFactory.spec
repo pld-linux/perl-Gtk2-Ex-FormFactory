@@ -1,16 +1,17 @@
 #
 # Conditional build:
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
-%bcond_without	tests	# do not perform "make test"
+%bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Gtk2
 %define		pnam	Ex-FormFactory
-Summary:	perl(Gtk2::Ex::FormFactory) - Makes building complex GUI's easy
+Summary:	Gtk2::Ex::FormFactory - makes building complex GUI's easy
+Summary(pl):	Gtk2::Ex::FormFactory - modu³ u³atwiaj±cy tworzenie z³o¿onych GUI
 Name:		perl-Gtk2-Ex-FormFactory
 Version:	0.65
 Release:	0.1
-License:	GPLv2.1+
+License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	904f6fe4b94248b56507710b29a53873
@@ -23,12 +24,30 @@ BuildRequires:	perl-Gtk2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-#%define		_noautoreq	'perl(anything_fake_or_conditional)'
-
 %description
-# from pod
-### Refer to http://www.exit1.org/ for
-### a comprehensive online documentation.
+This is a framework which tries to make building complex GUI's easy,
+by offering these two main features:
+- Consistent looking GUI without the need to code resp. tune each
+  widget by hand. Instead you declare the structure of your GUI,
+  connect it to the data of your program (which should be a well
+  defined set of objects) and control how this structure is
+  transformed into a specific layout in a very generic way.
+- Automatically keep widget and object states in sync (in both
+  directions), even with complex data structures with a lot of
+  internal dependencies, object nesting etc.
+
+%description -l pl
+To jest szkielet próbuj±cy u³atwiæ tworzenie z³o¿onych GUI oferuj±c
+dwie g³ówne cechy:
+- spójnie wygl±daj±ce GUI bez potrzeby kodowania i dopasowywania
+  rêcznie ka¿dego widgetu; zamiast tego wystarczy zadeklarowaæ
+  strukturê GUI, po³±czyæ j± z danymi programu (które powinny byæ
+  dobrze zdefiniowanym zbiorem obiektów) i kontrolowaæ jak ta
+  struktura jest przekszta³cana na okre¶lony wygl±d w bardzo
+  ogólny sposób.
+- automatyczne utrzymywanie stanu widgetów i obiektów w synchronizacji
+  (w obu kierunkach), nawet dla z³o¿onych struktur danych z du¿±
+  liczb± wewnêtrznych zale¿no¶ci, zagnie¿d¿onymi obiektami itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -48,10 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
-%{__install} tutorial/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/
+install tutorial/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 mv $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/README{,.tutorial}
-%{__install} examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
