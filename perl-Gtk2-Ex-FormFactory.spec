@@ -7,7 +7,7 @@
 %define		pdir	Gtk2
 %define		pnam	Ex-FormFactory
 Summary:	Gtk2::Ex::FormFactory - makes building complex GUI's easy
-Summary(pl.UTF-8):   Gtk2::Ex::FormFactory - moduł ułatwiający tworzenie złożonych GUI
+Summary(pl.UTF-8):	Gtk2::Ex::FormFactory - moduł ułatwiający tworzenie złożonych GUI
 Name:		perl-Gtk2-Ex-FormFactory
 Version:	0.65
 Release:	0.1
