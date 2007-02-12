@@ -7,7 +7,7 @@
 %define		pdir	Gtk2
 %define		pnam	Ex-FormFactory
 Summary:	Gtk2::Ex::FormFactory - makes building complex GUI's easy
-Summary(pl):	Gtk2::Ex::FormFactory - modu³ u³atwiaj±cy tworzenie z³o¿onych GUI
+Summary(pl.UTF-8):   Gtk2::Ex::FormFactory - moduÅ‚ uÅ‚atwiajÄ…cy tworzenie zÅ‚oÅ¼onych GUI
 Name:		perl-Gtk2-Ex-FormFactory
 Version:	0.65
 Release:	0.1
@@ -36,18 +36,18 @@ by offering these two main features:
   directions), even with complex data structures with a lot of
   internal dependencies, object nesting etc.
 
-%description -l pl
-To jest szkielet próbuj±cy u³atwiæ tworzenie z³o¿onych GUI oferuj±c
-dwie g³ówne cechy:
-- spójnie wygl±daj±ce GUI bez potrzeby kodowania i dopasowywania
-  rêcznie ka¿dego widgetu; zamiast tego wystarczy zadeklarowaæ
-  strukturê GUI, po³±czyæ j± z danymi programu (które powinny byæ
-  dobrze zdefiniowanym zbiorem obiektów) i kontrolowaæ jak ta
-  struktura jest przekszta³cana na okre¶lony wygl±d w bardzo
-  ogólny sposób.
-- automatyczne utrzymywanie stanu widgetów i obiektów w synchronizacji
-  (w obu kierunkach), nawet dla z³o¿onych struktur danych z du¿±
-  liczb± wewnêtrznych zale¿no¶ci, zagnie¿d¿onymi obiektami itp.
+%description -l pl.UTF-8
+To jest szkielet prÃ³bujÄ…cy uÅ‚atwiÄ‡ tworzenie zÅ‚oÅ¼onych GUI oferujÄ…c
+dwie gÅ‚Ã³wne cechy:
+- spÃ³jnie wyglÄ…dajÄ…ce GUI bez potrzeby kodowania i dopasowywania
+  rÄ™cznie kaÅ¼dego widgetu; zamiast tego wystarczy zadeklarowaÄ‡
+  strukturÄ™ GUI, poÅ‚Ä…czyÄ‡ jÄ… z danymi programu (ktÃ³re powinny byÄ‡
+  dobrze zdefiniowanym zbiorem obiektÃ³w) i kontrolowaÄ‡ jak ta
+  struktura jest przeksztaÅ‚cana na okreÅ›lony wyglÄ…d w bardzo
+  ogÃ³lny sposÃ³b.
+- automatyczne utrzymywanie stanu widgetÃ³w i obiektÃ³w w synchronizacji
+  (w obu kierunkach), nawet dla zÅ‚oÅ¼onych struktur danych z duÅ¼Ä…
+  liczbÄ… wewnÄ™trznych zaleÅ¼noÅ›ci, zagnieÅ¼dÅ¼onymi obiektami itp.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
