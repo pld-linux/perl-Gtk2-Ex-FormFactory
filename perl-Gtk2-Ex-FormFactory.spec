@@ -9,12 +9,12 @@
 Summary:	Gtk2::Ex::FormFactory - makes building complex GUI's easy
 Summary(pl.UTF-8):	Gtk2::Ex::FormFactory - moduł ułatwiający tworzenie złożonych GUI
 Name:		perl-Gtk2-Ex-FormFactory
-Version:	0.65
+Version:	0.67
 Release:	0.1
 License:	LGPL v2.1+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	904f6fe4b94248b56507710b29a53873
+# Source0-md5:	17f0cfd4957196f9928d023a4801ed5c
 URL:		http://search.cpan.org/dist/Gtk2-Ex-FormFactory/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
